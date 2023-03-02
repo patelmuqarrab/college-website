@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+      }
+      body{
+        background: linear-gradient(to top right,#1a4844,  #003933)
+
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+      }
+      .logo{
+        margin: 10px;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      h1{
+        font-weight: bold;
+        font-size: 50px;
+        cursor: pointer;
+        color:white;
+
+      }
+      .logo ul li{
+        list-style: none;
+        position: relative;
+        color:white;
+        display: inline-block;
+        margin: 0 25px;
+      }
+      .logo ul li a{
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+      }
+      .logo ul li::after{
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #009688;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+      }
+      .logo ul li:hover::after{
+        width: 100%;
+      }
+      h2{
+        text-transform: uppercase;
+        font-size: 70px;
+        margin-top: 80px;
+      }
+      .content{
+        color: white;
+        width: 100%;
+        top: 50%;
+        position:absolute;
+        transform: translateY(-50%);
+        text-align: center;
+      }
+      .content p{
+        margin: 25px auto;
+        font-weight: 100;
+        line-height: 25px;
+      }
+      button{
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        border-radius: 25px;
+        font-weight: bold;
+        border:2px solid #009688;
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        
+      }
+     span{
+        background: #009688;
+        height: 100%;
+        width: 0;
+        border-radius: 25px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+
+     }
+     button:hover span{
+        width: 100%;
+     }
+     button:hover{
+        border: none;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h1>MarMuq</h1>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Bedroom</a></li>
+            <li><a href="#">Dining</a></li>
+            <li><a href="#">Kitchen</a></li>
+            <li><a href="#">Backyard</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="content">
+        <h2>design your Home</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate nostrum delectus minima harum,<br> inventore rem laudantium accusantium odio!</p>
+        <div class="btn">
+            <button type="button"><span></span>MORE</button>
+            <button type="button"><span></span>SUBSCRIBE</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
